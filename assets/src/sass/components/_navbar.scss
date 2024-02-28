@@ -25,11 +25,11 @@
 $content-width: 2000px; // How wide or narrow do you want the bar to be?
 $breakpoint: 1101px; // When do you want to switch from mobile to desktop?
 $nav-height: 85px; // How tall do you want the navbar to be?
-$nav-background: #333333; // What background color do you want?
-$nav-font-color: #fafafa; // What primary font color?
-$link-hover-color: #7498be; // What color when you hover?
-$button-color: #fafafa; // What background color do you want the button to be?
-$button-hover-color: #eaeaea; // What hover color do you want the button to be?
+$nav-background: #d9d9d9; // What background color do you want?
+$nav-font-color: #404040; // What primary font color?
+$link-hover-color: #ffeac0; // What color when you hover?
+$button-color: #ffeac0; // What background color do you want the button to be?
+$button-hover-color: #f6dfa5; // What hover color do you want the button to be?
 
 // Sets the initial height and color of the navbar
 .navigation {
@@ -89,6 +89,7 @@ nav {
   background-color: $nav-background;
   display: block;
   float: none;
+  font-weight: 800;
   justify-content: center;
   padding: $nav-height 0 0;
   position: absolute;
@@ -109,7 +110,7 @@ nav {
         text-decoration: none;
         &:hover {
           background: $link-hover-color;
-          color: #eeeeee;
+          color: #333333;
         }
 
         &:not(:only-child):after {
@@ -216,7 +217,7 @@ nav {
   nav {
     display: flex;
     // LEFT ALIGN? ENABLE THIS
-    //justify-content: flex-end;
+    justify-content: flex-end;
     padding: 0;
     position: relative;
     ul {
@@ -251,6 +252,7 @@ nav {
 .nav-list > li:last-of-type {
   align-self: center;
   background-color: $button-color;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: #333333;
   cursor: pointer;
   letter-spacing: 1px;
@@ -294,7 +296,6 @@ nav {
     margin-right: 10px;
     margin-top: 22px;
     // LEFT ALIGN? DELETE THE POSITION
-    position: absolute;
     right: 0;
   }
 
@@ -309,7 +310,7 @@ nav {
   .nav-list > li:last-of-type a,
   .nav-list > li:last-of-type a:visited {
     line-height: 8px;
-    padding: 15px 20px;
+    padding: 15px 40px;
   }
 }
 
