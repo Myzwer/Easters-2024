@@ -37,30 +37,23 @@ get_header(); ?>
 
     <div class="bg-gray text-white p-10">
         <div class="text-center mx-auto">
-            <h1 class = "uppercase font-bold text-2xl lg:text-5xl"><?php the_field('tagline'); ?></h1>
+            <h1 class="uppercase font-bold text-2xl lg:text-5xl"><?php the_field('tagline'); ?></h1>
         </div>
     </div>
 
 
-    <div class="bg-white md:p-10">
-        <div class=" lg:max-w-5xl lg:mx-auto">
-            <div class="grid grid-cols-12 gap-4 md:gap-10">
-                <div class="col-span-12 md:col-span-4">
-                    <?php get_template_part('components/cards/_sample-card'); ?>
-                </div>
+    <div class="bg-no-repeat bg-scroll bg-cover relative overflow-hidden"
+         style="background:
+                 url('<?php echo get_template_directory_uri(); ?>/assets/src/img/background.jpg') center center;">
 
-                <div class="col-span-12 md:col-span-4">
-                    <div class="prose">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid architecto
-                        error et laudantium molestiae odit tempora temporibus? Aliquid aspernatur aut autem dolore, enim
-                        minima molestias sapiente. Consectetur culpa nihil obcaecati?
-                    </div>
-                </div>
+        <div class="hidden xl:block absolute right-0">
+            <img class="opacity-30" src="<?php the_field('crown', 'options'); ?>" alt="Crown">
+        </div>
 
-                <div class="col-span-12 md:col-span-4 prose">
-                    <h2>Header Line</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores earum magni nihil
-                        praesentium quam sequi sunt vitae. Excepturi iure molestias perferendis quidem, recusandae
-                        tempora. A hic nihil pariatur suscipit ut.</p>
+        <div class=" lg:max-w-5xl lg:mx-auto py-10">
+            <div class="grid grid-cols-12 gap-4 md:gap-10 timesdates p-5">
+                <div class="col-span-12 md:col-span-6 prose">
+                    <?php the_field('church_locations'); ?>
                 </div>
             </div>
         </div>

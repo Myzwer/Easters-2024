@@ -35,3 +35,28 @@
   height: 2px;
   opacity: 0.6;
 }
+
+// Prose override on the front page
+.timesdates .prose {
+  h2 {
+    font-size: 2em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  .date {
+    font-size: 1.6em;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    padding-bottom: 2px;
+  }
+
+  .time {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    margin-top: -10px;
+  }
+}
