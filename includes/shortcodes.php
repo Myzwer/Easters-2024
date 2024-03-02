@@ -29,7 +29,36 @@ function main_button_shortcode($atts, $content = null)
     return '<a href="' . esc_url($button_url) . '"' . $open_in_cc_modal . '><button class="fab-main mt-3"><i class="fa-solid fa-circle-arrow-right"></i> ' . esc_html($button_text) . '</button></a>';
 }
 
+//******************** FAB (Floating Action) *********************
+
+/*
+ * MAIN BUTTON
+ * Defaults to "#" if no value is given
+ * If "cc='y'" is added to the shortcode it will open the church center modal.
+ * Usage: [main_button text="Learn More" url="https://example.com" cc="Y"]
+*/
+
 add_shortcode('main_button', 'main_button_shortcode');
+
+function ghost_black_button_shortcode($atts, $content = null)
+{
+    $button_text = isset($atts['text']) ? $atts['text'] : 'Learn More';
+    $button_url = isset($atts['url']) ? $atts['url'] : '#';
+    $open_in_cc_modal = isset($atts['cc']) && strtolower($atts['cc']) === 'y' ? ' data-open-in-church-center-modal="true"' : '';
+    return '<a href="' . esc_url($button_url) . '"' . $open_in_cc_modal . '><button class="ghost-black mt-3"><i class="fa-solid fa-circle-arrow-right"></i> ' . esc_html($button_text) . '</button></a>';
+}
+
+add_shortcode('ghost_black', 'ghost_black_button_shortcode');
+
+function ghost_white_button_shortcode($atts, $content = null)
+{
+    $button_text = isset($atts['text']) ? $atts['text'] : 'Learn More';
+    $button_url = isset($atts['url']) ? $atts['url'] : '#';
+    $open_in_cc_modal = isset($atts['cc']) && strtolower($atts['cc']) === 'y' ? ' data-open-in-church-center-modal="true"' : '';
+    return '<a href="' . esc_url($button_url) . '"' . $open_in_cc_modal . '><button class="ghost-white mt-3"><i class="fa-solid fa-circle-arrow-right"></i> ' . esc_html($button_text) . '</button></a>';
+}
+
+add_shortcode('ghost_white', 'ghost_white_button_shortcode');
 
 
 
