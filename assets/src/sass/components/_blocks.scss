@@ -1,0 +1,23 @@
+/**
+ * Blocks
+ * =================================
+ * - These are classes used to style the various block sections on the site.
+ *
+ *
+ *
+ *
+ */
+
+.rounded-image-outer {
+  border-radius: 55px;
+}
+
+.rounded-image {
+  border-radius: 50px;
+}
+
+.dark-info {
+  li:before {
+    color: #eeeeee;
+  }
+}
