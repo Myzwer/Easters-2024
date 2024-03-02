@@ -59,6 +59,28 @@ get_header(); ?>
         </div>
     </div>
 
+<?php
+// Check value exists.
+if (have_rows('experience_info')) :
+
+    // Loop through rows.
+    while (have_rows('experience_info')) : the_row();
+
+        switch (get_row_layout()) {
+            case 'dark_mode_block':
+                get_template_part('components/blocks/_dark-block');
+                break;
+
+            case 'light_mode_block':
+                get_template_part('components/blocks/_light-block');
+                break;
+
+        }
+
+        // End loop.
+    endwhile;
+endif;
+?>
 
 <?php
 get_footer();
