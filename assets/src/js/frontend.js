@@ -1,4 +1,5 @@
 import $ from "jquery";
+import "./accordion";
 import "../sass/frontend.scss";
 
 $(function () {

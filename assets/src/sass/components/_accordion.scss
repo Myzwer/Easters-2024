@@ -1,0 +1,93 @@
+$color: #eeeeee;
+
+/* This code requires some attribute selectors and was written for a different project that used higher nesting depth */
+/* stylelint-disable max-nesting-depth, selector-no-qualifying-type */
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid $color;
+    button[aria-expanded="true"] {
+      border-bottom: 1px solid $color;
+    }
+  }
+  button {
+    background: none;
+    color: $color;
+    display: block;
+    font-size: 1.15em;
+    font-weight: 400;
+    outline: none;
+    padding: 1em 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      &:after {
+        cursor: pointer;
+      }
+    }
+    .accordion-title {
+      font-size: 1.5em;
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      border: 1px solid;
+      border-radius: 22px;
+      display: inline-block;
+      height: 22px;
+      position: absolute;
+      right: 0;
+      top: 30px;
+      width: 22px;
+      &:before {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 5px;
+        position: absolute;
+        top: 9px;
+        width: 10px;
+      }
+      &:after {
+        background: currentColor;
+        content: "";
+        display: block;
+        height: 10px;
+        left: 9px;
+        position: absolute;
+        top: 5px;
+        width: 2px;
+      }
+    }
+  }
+  button[aria-expanded="true"] {
+    .icon {
+      &:after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      max-height: 100%;
+      opacity: 1;
+      padding: 30px 0;
+      transition: all 0.2s linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.2s linear, max-height 0.2s linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 1em;
+      font-weight: 300;
+      padding-bottom: 10px;
+    }
+  }
+}
+/* stylelint-enable max-nesting-depth, selector-no-qualifying-type */
