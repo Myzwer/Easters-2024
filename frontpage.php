@@ -82,5 +82,7 @@ if (have_rows('experience_info')) :
 endif;
 ?>
 
+<?php get_template_part('components/blocks/_faq-dark'); ?>
+
 <?php
 get_footer();
