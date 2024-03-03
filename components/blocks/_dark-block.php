@@ -15,7 +15,7 @@
  */
 ?>
 
-<div class="bg-gray dark-info">
+<div class="bg-gray py-14 dark-info">
     <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 gap-4 md:gap-10'>
         <div class="col-span-12 md:col-span-4 relative">
             <div class="content-middle-medium">
