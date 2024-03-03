@@ -27,7 +27,7 @@ get_header(); ?>
     <div class="bg-gray">
         <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 gap-4 md:gap-10'>
             <div class="col-span-12 relative">
-                <h2 class="text-4xl font-bold uppercase text-white"><?php the_field('directions_title'); ?></h2>
+                <h2 class="text-5xl lg:text-7xl font-bold uppercase pb-2 text-white"><?php the_field('directions_title'); ?></h2>
             </div>
             <div class="col-span-12 md:col-span-6 relative">
                 <?php
@@ -64,6 +64,41 @@ get_header(); ?>
 
 
             </div>
+        </div>
+    </div>
+
+<?php
+// Check value exists.
+if (have_rows('ftg_info')) :
+
+    // Loop through rows.
+    while (have_rows('ftg_info')) : the_row();
+
+        switch (get_row_layout()) {
+            case 'dark_mode_block':
+                get_template_part('components/blocks/_dark-block');
+                break;
+
+            case 'light_mode_block':
+                get_template_part('components/blocks/_light-block');
+                break;
+
+        }
+
+        // End loop.
+    endwhile;
+endif;
+?>
+
+    <div class="bg-blue bg-gray text-white">
+        <div class='lg:max-w-6xl mx-auto grid grid-cols-12 p-5 py-10 md:py-20 gap-4 md:gap-10'>
+            <div class="col-span-12 relative">
+                <h2 class="text-5xl font-bold uppercase pb-2 text-white"><?php the_field('where_go_title'); ?></h2>
+            </div>
+            <div class="col-span-12 md:col-span-10 lg:col-span-8 relative">
+                <?php get_template_part('components/layouts/_accordion'); ?>
+            </div>
+
         </div>
     </div>
 
