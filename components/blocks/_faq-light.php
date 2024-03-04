@@ -27,7 +27,7 @@
 
         <div class="grid grid-cols-12 gap-4 md:gap-10 p-5 text-black">
             <div class="col-span-12">
-                <h2 class="text-4xl font-bold uppercase">FAQ's</h2>
+                <h2 class="text-6xl font-bold uppercase">FAQ's</h2>
             </div>
 
             <!-- Start Questions -->
