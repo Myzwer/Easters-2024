@@ -34,10 +34,10 @@
             <?php
 
             // Check rows exists.
-            if (have_rows('faqs')):
+            if (have_rows('faq')):
 
                 // Loop through rows.
-                while (have_rows('faqs')) : the_row(); ?>
+                while (have_rows('faq')) : the_row(); ?>
                     <div class="col-span-12 md:col-span-6 pb-2 z-10">
                         <h3 class="font-bold text-2xl pb-2"><?php the_sub_field('question'); ?></h3>
                         <p><?php the_sub_field('answer'); ?></p>
