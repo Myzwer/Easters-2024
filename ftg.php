@@ -102,4 +102,6 @@ endif;
         </div>
     </div>
 
+<?php get_template_part( 'components/blocks/_faq-light'); ?>
+
 <?php get_footer();
