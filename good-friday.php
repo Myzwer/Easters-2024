@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-    <div class="bg-gray">
+    <div class="bg-gray relative overflow-hidden">
         <div class="hidden xl:block absolute right-0">
             <img class="opacity-30" src="<?php the_field('bread', 'options'); ?>" alt="Bread and Juice">
         </div>
