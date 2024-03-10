@@ -12,14 +12,19 @@
 
 get_header(); ?>
 
-    <div class="bg-gray relative overflow-hidden">
-        <div class="hidden xl:block absolute right-0">
-            <img class="opacity-30" src="<?php the_field('bread', 'options'); ?>" alt="Bread and Juice">
-        </div>
+    <div class="bg-no-repeat bg-scroll bg-cover relative overflow-hidden"
+         style="background:
+                 url('<?php echo get_template_directory_uri(); ?>/assets/src/img/gf-bg.jpg') center center;">
+    <div class=" relative overflow-hidden">
+
         <div class=" lg:max-w-5xl lg:mx-auto py-28 px-5">
             <h1 class="text-8xl md:text-9xl font-bold mb-5 text-white"><?php the_field('title'); ?></h1>
             <h3 class="text-xl mb-5 text-white"><?php the_field('details'); ?></h3>
         </div>
+    </div>
+
+
+
     </div>
 
 <?php
